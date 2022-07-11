@@ -22,10 +22,11 @@ enum APIConstants {
 
     public static var baseURL = "https://api.github.com"
 
+    static let token = "" //tokenを設定
     public static var header: [String : String]? {
         return [
             "Accept": "application/json",
-            "Authorization": "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"
+            "Authorization": token
         ]
     }
 }

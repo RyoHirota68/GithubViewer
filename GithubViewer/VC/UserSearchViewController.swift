@@ -38,6 +38,11 @@ class UserSearchViewController: UIViewController {
 extension UserSearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         view.endEditing(true)
+        if APIConstants.token == "" {
+            let alert = UIAlertController().createAlert(withTitle: "", message: "トークンを入力して再ビルドしてください。")
+            present(alert, animated: true)
+            return
+        }
         if let searchUserName = searchBar.text {
             self.searchUserName = searchUserName
             self.currentPage = self.defaultPage

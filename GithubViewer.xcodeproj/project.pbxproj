@@ -10,6 +10,7 @@
 		1005FDD6287B43E4005F703D /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1005FDD5287B43E4005F703D /* WebViewController.swift */; };
 		1005FDD8287B43E9005F703D /* WebViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1005FDD7287B43E9005F703D /* WebViewController.storyboard */; };
 		1005FDDD287C1871005F703D /* PKHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 1005FDDC287C1871005F703D /* PKHUD */; };
+		1005FDE3287C26A4005F703D /* UIAlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1005FDE2287C26A4005F703D /* UIAlertController+Extension.swift */; };
 		10434EF0287972C000285017 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10434EEE287972C000285017 /* UserCell.swift */; };
 		10434EF1287972C000285017 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10434EEF287972C000285017 /* UserCell.xib */; };
 		10434EF42879766900285017 /* UIImageView+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10434EF32879766900285017 /* UIImageView+URL.swift */; };
@@ -44,6 +45,7 @@
 /* Begin PBXFileReference section */
 		1005FDD5287B43E4005F703D /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		1005FDD7287B43E9005F703D /* WebViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WebViewController.storyboard; sourceTree = "<group>"; };
+		1005FDE2287C26A4005F703D /* UIAlertController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extension.swift"; sourceTree = "<group>"; };
 		10434EEE287972C000285017 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		10434EEF287972C000285017 /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
 		10434EF32879766900285017 /* UIImageView+URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+URL.swift"; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				10434EF8287987C900285017 /* JSONDecoder+Extension.swift */,
 				10434F03287A8E9600285017 /* NSObject+ClassName.swift */,
 				108F03DC287B040300F0CF59 /* UIColor+extention.swift */,
+				1005FDE2287C26A4005F703D /* UIAlertController+Extension.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 			files = (
 				1005FDD6287B43E4005F703D /* WebViewController.swift in Sources */,
 				10434EF62879872100285017 /* UserDetailModel.swift in Sources */,
+				1005FDE3287C26A4005F703D /* UIAlertController+Extension.swift in Sources */,
 				107BAD722875814100CF13D1 /* UserSearchViewController.swift in Sources */,
 				107BAD902876E32F00CF13D1 /* APIConstants.swift in Sources */,
 				10434F0A287ADD6C00285017 /* RepositoriesModel.swift in Sources */,
