@@ -13,10 +13,11 @@ class UserCell: UITableViewCell {
 
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var iconImageView: UIImageView!
+    
     var userPageURL: String = ""
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
     func setup(userModel: UserModel) {
@@ -27,8 +28,6 @@ class UserCell: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-//        print(userPageURL)
-        // Configure the view for the selected state
     }
     
 }

@@ -26,8 +26,7 @@ extension BaseRequestProtocol {
         } else {
             urlRequest = URLRequest(url: baseURL.appendingPathComponent(path))
         }
-        
-//        var urlRequest = URLRequest(url: baseURL.appendingPathComponent(path))
+
         urlRequest.httpMethod = method.rawValue
 
         urlRequest.allHTTPHeaderFields = headers
@@ -40,7 +39,6 @@ extension BaseRequestProtocol {
                 urlRequest = try encoding.encode(urlRequest, with: param)
             }
         }
-        print("url = ",urlRequest)
         
         return urlRequest
     }

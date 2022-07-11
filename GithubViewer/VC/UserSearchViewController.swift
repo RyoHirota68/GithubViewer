@@ -45,7 +45,6 @@ extension UserSearchViewController: UISearchBarDelegate {
             
             APICliant.call(request, disposeBag, onSuccess: {response in
                 self.userModels = response.items
-                print("users = ", self.userModels)
                 self.tableView.setContentOffset(.zero, animated: false)
             }, onError: {error in
               // error handling
@@ -93,7 +92,6 @@ extension UserSearchViewController: UITableViewDataSource {
             APICliant.call(request, disposeBag) { response in
                 self.userModels.append(contentsOf: response.items.map{$0})
             } onError: { error in
-                print(self.userModels.count)
                 print(error)
             }
 
