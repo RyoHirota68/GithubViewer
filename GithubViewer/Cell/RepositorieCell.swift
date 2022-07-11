@@ -19,6 +19,7 @@ class RepositorieCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        languageColorView.layer.cornerRadius = languageColorView.frame.size.height / 2
     }
 
     func setup(repositoriesModel: RepositoriesModel) {
@@ -29,7 +30,6 @@ class RepositorieCell: UITableViewCell {
             
             // githubの言語の色を設定
             languageColorView.backgroundColor = UIColor.init(language: lang)
-            languageColorView.layer.cornerRadius = languageColorView.frame.size.height / 2
         } else {
             languageLabel.text = ""
         }
