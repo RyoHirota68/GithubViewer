@@ -7,6 +7,7 @@
 
 import UIKit
 import RxSwift
+import PKHUD
 
 class UserDetailViewController: UIViewController {
     
@@ -55,10 +56,13 @@ class UserDetailViewController: UIViewController {
     
     /// リポジトリ一覧取得
     func repositoriesRequest() {
+        HUD.show(.progress)
         let request = RepositoriesRequest(userPageURL: userDetailModel.reposURL, query: nil)
         APICliant.call(request, disposeBag, onSuccess: { response in
             self.repositoriesModel = response.filter{$0.fork == false}
+            HUD.hide()
         }, onError: {error in
+            HUD.hide()
             print(error)
         })
     }
