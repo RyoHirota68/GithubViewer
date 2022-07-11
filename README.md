@@ -13,3 +13,10 @@ GithubViewer/GithubViewer/Network/Base/APIConstants.swift
 ```
  static let token = "" //tokenを設定
 ```
+
+# 使用ライブラリ
+
+- PKHUD
+- RxSwift
+- Alamofire
+- Nuke
