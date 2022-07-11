@@ -87,6 +87,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1005FDDA287BF283005F703D /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				1005FDD5287B43E4005F703D /* WebViewController.swift */,
+				1005FDD7287B43E9005F703D /* WebViewController.storyboard */,
+				10434EFF2879EE0100285017 /* UserDetailViewController.swift */,
+				10434F012879EE0800285017 /* UserDetailViewController.storyboard */,
+				107BAD712875814100CF13D1 /* UserSearchViewController.swift */,
+				107BAD732875814200CF13D1 /* UserSearchViewController.storyboard */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
 		10434EED287972AD00285017 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,18 +161,13 @@
 		107BAD6C2875814100CF13D1 /* GithubViewer */ = {
 			isa = PBXGroup;
 			children = (
+				1005FDDA287BF283005F703D /* VC */,
 				10434EF22879765600285017 /* Extention */,
 				10434EED287972AD00285017 /* Cell */,
 				107BAD8A2876A78600CF13D1 /* Network */,
 				107BAD872876A4D900CF13D1 /* Model */,
 				107BAD6D2875814100CF13D1 /* AppDelegate.swift */,
 				107BAD6F2875814100CF13D1 /* SceneDelegate.swift */,
-				1005FDD5287B43E4005F703D /* WebViewController.swift */,
-				1005FDD7287B43E9005F703D /* WebViewController.storyboard */,
-				10434EFF2879EE0100285017 /* UserDetailViewController.swift */,
-				10434F012879EE0800285017 /* UserDetailViewController.storyboard */,
-				107BAD712875814100CF13D1 /* UserSearchViewController.swift */,
-				107BAD732875814200CF13D1 /* UserSearchViewController.storyboard */,
 				107BAD762875814300CF13D1 /* Assets.xcassets */,
 				107BAD782875814300CF13D1 /* LaunchScreen.storyboard */,
 				107BAD7B2875814300CF13D1 /* Info.plist */,
