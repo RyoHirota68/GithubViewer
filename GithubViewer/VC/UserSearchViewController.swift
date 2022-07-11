@@ -47,6 +47,12 @@ extension UserSearchViewController: UISearchBarDelegate {
             showAlert(title: "", message: "トークンを入力して再ビルドしてください")
             return
         }
+        
+        if searchBar.text!.isEmpty {
+            showAlert(title: "", message: "半角英数１文字以上入力して検索してください")
+            return
+        }
+        
         if let searchUserName = searchBar.text {
             self.searchUserName = searchUserName
             self.currentPage = self.defaultPage
