@@ -63,8 +63,13 @@ class UserDetailViewController: UIViewController {
             HUD.hide()
         }, onError: {error in
             HUD.hide()
-            print(error)
+            self.showAlert(title: "", message: error.localizedDescription)
         })
+    }
+    
+    func showAlert(title:String, message:String) {
+        let alert = UIAlertController().createAlert(withTitle: title, message: message)
+        present(alert, animated: true)
     }
 }
 
@@ -104,7 +109,7 @@ extension UserDetailViewController: UITableViewDataSource {
             APICliant.call(request, disposeBag) { response in
                 self.repositoriesModel.append(contentsOf: response.filter{$0.fork == false})
             } onError: { error in
-                print(error)
+                self.showAlert(title: "", message: error.localizedDescription)
             }
             
         }

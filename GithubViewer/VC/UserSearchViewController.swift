@@ -32,6 +32,11 @@ class UserSearchViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "UserCell", bundle: nil), forCellReuseIdentifier: "UserCell")}
+    
+    func showAlert(title:String, message:String) {
+        let alert = UIAlertController().createAlert(withTitle: title, message: message)
+        present(alert, animated: true)
+    }
 }
 
 
@@ -39,8 +44,7 @@ extension UserSearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         view.endEditing(true)
         if APIConstants.token == "" {
-            let alert = UIAlertController().createAlert(withTitle: "", message: "トークンを入力して再ビルドしてください。")
-            present(alert, animated: true)
+            showAlert(title: "", message: "トークンを入力して再ビルドしてください")
             return
         }
         if let searchUserName = searchBar.text {
@@ -53,8 +57,7 @@ extension UserSearchViewController: UISearchBarDelegate {
                 self.tableView.setContentOffset(.zero, animated: false)
             }, onError: {error in
               // error handling
-                print(error)
-
+                self.showAlert(title: "", message: error.localizedDescription)
             })
         }
     }
@@ -69,7 +72,7 @@ extension UserSearchViewController: UITableViewDelegate {
             viewController.userDetailModel = response
             self.navigationController?.pushViewController(viewController, animated: true)
         }, onError: {error in
-            
+            self.showAlert(title: "", message: error.localizedDescription)
         })
     }
 }
@@ -97,7 +100,7 @@ extension UserSearchViewController: UITableViewDataSource {
             APICliant.call(request, disposeBag) { response in
                 self.userModels.append(contentsOf: response.items.map{$0})
             } onError: { error in
-                print(error)
+                self.showAlert(title: "", message: error.localizedDescription)
             }
 
         }

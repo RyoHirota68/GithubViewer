@@ -64,8 +64,12 @@ struct APICliant {
         return afRequest(request).responseData { response in
             switch response.result {
             case .success(_):
-                let data: T.ResponseType = try! JSONDecoder().decode(T.ResponseType.self, from: response.data!)
-                completion(.success(data))
+                do {
+                    let data: T.ResponseType = try JSONDecoder().decode(T.ResponseType.self, from: response.data!)
+                    completion(.success(data))
+                } catch  {
+                    completion(.failure(error))
+                }
             case let .failure(error):
                 completion(.failure(error))
             }
